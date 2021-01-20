@@ -1,11 +1,13 @@
 import React from "react";
 import './App.css';
-import {MapYandex} from "./MapBox/MapYandex";
+import {CoordinateFormComponent} from "./СoordinateFormComponent/СoordinateFormComponent";
+import {MapBox} from "./MapBox/MapBox";
 
 function App() {
     return (
         <div className="App">
-            <MapYandex/>
+            <CoordinateFormComponent/>
+            <MapBox/>
         </div>
     );
 }

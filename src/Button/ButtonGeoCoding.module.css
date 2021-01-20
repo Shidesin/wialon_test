@@ -1,0 +1,9 @@
+.button_style {
+    padding: .5em 1em;
+    margin: 0 10px;
+    background-color: #ffdb4d;
+    border-radius: 30px;
+    width: max-content;
+    height: 30px;
+    outline: none;
+}
