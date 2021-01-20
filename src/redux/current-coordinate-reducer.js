@@ -14,7 +14,12 @@ const slice = createSlice({
             state.currentGeoData = action.payload;
         },
         setDataToArrayGeoData(state, action){
-            state.arrayGeoData.push(action.payload);
+            if (!state.arrayGeoData.length || state.arrayGeoData.length === 1){
+                state.arrayGeoData.push(action.payload)
+            } else if (state.arrayGeoData.length >= 2){
+                state.arrayGeoData.push(action.payload)
+                state.arrayGeoData = state.arrayGeoData.slice(-2)
+            }
         }
     }
 })

@@ -5,8 +5,6 @@ import {setCurrentGeoCoord, setDataToArrayGeoData} from '../redux/current-coordi
 
 
 export  const MapBox = () => {
-    console.log('MapBox render')
-
 
     const maps = useRef()
 
@@ -39,7 +37,7 @@ export  const MapBox = () => {
             })
 
             myMap.events.add('dblclick', function (e) {
-                let coords = e.get('coords');
+                let coords = e.get('coords').toString().split(',');
                 dispatch(setCurrentGeoCoord(coords))
                 dispatch(setDataToArrayGeoData(coords))
             });

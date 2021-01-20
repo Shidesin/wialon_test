@@ -3,10 +3,10 @@ import style from './ButtonGeoCoding.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {getCoordinateForRoute} from "../selectors/appSelector";
 import {setCoordinateState} from "../redux/coordinateDataState-reducer";
+import {createPopupWindow} from "../common/component/Popup/PopupCustom";
 
 
-export const ButtonGeoCoding = React.memo(({currentAddress}) => {
-    console.log('Render ButtonGeoCoding')
+export const ButtonGeoCoding = ({currentAddress}) => {
 
     const dispatch = useDispatch()
 
@@ -16,13 +16,14 @@ export const ButtonGeoCoding = React.memo(({currentAddress}) => {
 
         if (coordForRoute && coordForRoute.length === 1) {
             let finalData = {
-                coordinates: coordForRoute,
+                coordinates: coordForRoute[0],
                 address: currentAddress,
-                date: `${new Date()}`,
-                distance: '',
-                duration: '',
+                date: `${new Date().toDateString()}, ${new Date().toLocaleTimeString()}`,
+                distance: '0',
+                duration: '0',
             };
             dispatch(setCoordinateState(finalData))
+            createPopupWindow(finalData.coordinates, finalData.address, finalData.date, finalData.distance, finalData.duration)
 
         } else if (coordForRoute && coordForRoute.length > 1) {
 
@@ -43,13 +44,14 @@ export const ButtonGeoCoding = React.memo(({currentAddress}) => {
                     let duration = await path.properties.get("duration").text;
 
                     let finalData = {
-                        coordinates: coordForRoute,
+                        coordinates: coordForRoute[1],
                         address: currentAddress ,
-                        date: `${new Date()}`,
+                        date: `${new Date().toDateString()}, ${new Date().toLocaleTimeString()}`,
                         distance: distance ,
                         duration: duration ,
                     };
                     dispatch(setCoordinateState(finalData))
+                    createPopupWindow(finalData.coordinates, finalData.address, finalData.date, finalData.distance, finalData.duration)
 
                 });
                 multiRoute.destroy();
@@ -71,4 +73,4 @@ export const ButtonGeoCoding = React.memo(({currentAddress}) => {
             Отправить
         </button>
     )
-})
+}
