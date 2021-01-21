@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wialon_test/static/css/main.b3801bc9.chunk.css",
+    "main.css": "/wialon_test/static/css/main.bdfbc339.chunk.css",
     "main.js": "/wialon_test/static/js/main.e6490a84.chunk.js",
     "main.js.map": "/wialon_test/static/js/main.e6490a84.chunk.js.map",
     "runtime-main.js": "/wialon_test/static/js/runtime-main.beb80b22.js",
@@ -10,14 +10,14 @@
     "static/js/2.e62345b8.chunk.js.map": "/wialon_test/static/js/2.e62345b8.chunk.js.map",
     "index.html": "/wialon_test/index.html",
     "static/css/2.684e2c8e.chunk.css.map": "/wialon_test/static/css/2.684e2c8e.chunk.css.map",
-    "static/css/main.b3801bc9.chunk.css.map": "/wialon_test/static/css/main.b3801bc9.chunk.css.map",
+    "static/css/main.bdfbc339.chunk.css.map": "/wialon_test/static/css/main.bdfbc339.chunk.css.map",
     "static/js/2.e62345b8.chunk.js.LICENSE.txt": "/wialon_test/static/js/2.e62345b8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.beb80b22.js",
     "static/css/2.684e2c8e.chunk.css",
     "static/js/2.e62345b8.chunk.js",
-    "static/css/main.b3801bc9.chunk.css",
+    "static/css/main.bdfbc339.chunk.css",
     "static/js/main.e6490a84.chunk.js"
   ]
 }
