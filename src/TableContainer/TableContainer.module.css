@@ -1,0 +1,67 @@
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 32vw;
+    background-color: rgba(220, 220, 220, 0.27);
+}
+
+.fixedBox {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    overflow: auto;
+
+}
+
+.itemRoutecontainer {
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+}
+
+.itemResult{
+    font-size: 12px;
+    justify-content: flex-end;
+}
+
+.number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 1vw;
+    margin: 0 5px;
+}
+
+.coordinate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 6vw;
+    flex-wrap: nowrap;
+    margin: 0 5px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 18vw;
+    margin: 0 5px;
+
+}
+
+.distance {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 6vw;
+    text-align: center;
+}

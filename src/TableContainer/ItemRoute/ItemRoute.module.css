@@ -1,0 +1,48 @@
+.itemRoutecontainer {
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+
+}
+
+.number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 1vw;
+    margin: 0 5px;
+}
+
+.coordinate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 6vw;
+    flex-wrap: nowrap;
+    margin: 0 5px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 19vw;
+    margin: 0 5px;
+
+}
+
+.distance {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 4vw;
+    text-align: center;
+}

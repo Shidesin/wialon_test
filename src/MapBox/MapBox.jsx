@@ -11,7 +11,7 @@ export  const MapBox = () => {
     const dispatch = useDispatch()
 
     const style = {
-        width: "100%",
+        width: '67.8vw',
         height: "90vh"
     };
 
@@ -22,10 +22,8 @@ export  const MapBox = () => {
     }, []);
 
     const init = () => {
-
         let myMap;
         if (maps.current) {
-
             myMap = new window.ymaps.Map(maps.current, {
                 center: [53.9, 27.56],
                 zoom: 12,
@@ -35,7 +33,6 @@ export  const MapBox = () => {
                     "scrollZoom",
                 ]
             })
-
             myMap.events.add('dblclick', function (e) {
                 let coords = e.get('coords').toString().split(',');
                 dispatch(setCurrentGeoCoord(coords))
@@ -45,7 +42,7 @@ export  const MapBox = () => {
     };
 
     return (
-        <div className="App">
+        <div >
             <div ref={maps} style={style}/>
         </div>
     );

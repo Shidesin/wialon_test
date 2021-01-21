@@ -28,17 +28,22 @@ export const CoordinateFormComponent = () => {
         <div className={style.main_box}>
 
             <div className={style.geoData_box}>
+
+                <div className={style.label}>Lat:</div>
                 <div className={style.main_box_display}>
                     {geocodeCoordinate && geocodeCoordinate[0]}
                 </div>
 
+                <div className={style.label}>Lng:</div>
                 <div className={style.main_box_display}>
                     {geocodeCoordinate && geocodeCoordinate[1]}
                 </div>
 
+                <div className={style.label}>Адрес:</div>
                 <div className={style.main_box_display}>
                     {currentAddress}
                 </div>
+
             </div>
             <div className={style.button_box}>
                 <ButtonGeoCoding currentAddress={currentAddress}/>

@@ -8,31 +8,3 @@ export const loadScriptApi = (onLoad) => {
     document.body.appendChild(script);
     script.onload = onLoad;
 };
-
-export const getDistance = (dataRoute) => {
-    let multiRoute = new window.ymaps.multiRouter.MultiRoute(
-        {
-            referencePoints: dataRoute,
-            params: {result: 1}
-        },
-        {boundsAutoApply: true}
-    );
-
-    multiRoute.model.events.add('requestsuccess', function () {
-        debugger
-
-        let activeRoute = multiRoute.getActiveRoute();
-
-        let activeRoutePaths = activeRoute.getPaths();
-
-        activeRoutePaths.each(function (path) {
-
-            console.log("Длина пути: " + path.properties.get("distance").text);
-            console.log("Время прохождения пути: " + path.properties.get("duration").text);
-        });
-
-        // multiRoute.destroy();
-    });
-    multiRoute.editor.stop();
-    // maps.geoObjects.add(multiRoute);
-}
